@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.vitcarazvan.lab5android.ro.ubbcluj.vitcarazvan.lab5android.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="17dp"
+        android:id="@+id/tagNameInput"
+        android:layout_alignParentTop="true"
+        android:hint="Tag Name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:ems="10"
+        android:layout_below="@+id/tagNameInput"
+        android:layout_alignParentStart="true"
+        android:id="@+id/cityInput"
+        android:layout_alignParentEnd="true"
+        android:hint="City" />
+
+    <Button
+        android:text="Refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/addButton"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/refreshButton" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/addButton"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/myListView" />
+
+    <Button
+        android:text="Send Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendEmail"
+        android:layout_alignBaseline="@+id/refreshButton"
+        android:layout_alignBottom="@+id/refreshButton"
+        android:layout_toEndOf="@+id/refreshButton" />
+
+    <Button
+        android:text="Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/addButton"
+        android:elevation="0dp"
+        android:layout_below="@+id/sprayCanInput"
+        android:layout_toStartOf="@+id/refreshButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:ems="10"
+        android:id="@+id/sprayCanInput"
+        android:hint="Spray Can"
+        android:layout_below="@+id/cityInput"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
