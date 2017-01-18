@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "238584300905",
+    "firebase_url": "https://lab7-6debc.firebaseio.com",
+    "project_id": "lab7-6debc",
+    "storage_bucket": "lab7-6debc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238584300905:android:c79efcd41b80a3ec",
+        "android_client_info": {
+          "package_name": "com.example.vitcarazvan.lab7android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238584300905-dg4e1sfniomsd0ot47nrpv9u39kb7571.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgNHht92SHyWKlljKnmA-T0DYBptQGA0c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
