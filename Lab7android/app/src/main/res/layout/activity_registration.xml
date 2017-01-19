@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:text="Registration"
         android:id="@+id/btnRegistrationUser"
-        android:onClick="btnRegistrationUser_Click "
+        android:onClick="btnRegistrationUser_Click"
         android:layout_below="@+id/txtPasswordRegistration"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

@@ -37,7 +37,7 @@ public class ChartActivity extends AppCompatActivity {
 
     private static String TAG = "Chartactivity";
 
-    public ArrayList<String> productNamesArray2 = new ArrayList<String>();
+    public ArrayList<String> tagNamesArray2 = new ArrayList<String>();
 
 
     List<Integer> yDataList = new ArrayList<>(Arrays.asList(0,0,0));
@@ -69,8 +69,8 @@ public class ChartActivity extends AppCompatActivity {
 
                 for (DataSnapshot request : dataSnapshot.getChildren()) {
 
-                    String productName = request.child("productName").getValue().toString();
-                    productNamesArray2.add(productName);
+                    String tagName = request.child("tagName").getValue().toString();
+                    tagNamesArray2.add(tagName);
 
                 }
             }
@@ -81,23 +81,23 @@ public class ChartActivity extends AppCompatActivity {
         });
 
 
-        productNamesArray2.add("tableta");productNamesArray2.add("tableta");productNamesArray2.add("tableta");
-        productNamesArray2.add("telefon");productNamesArray2.add("telefon");productNamesArray2.add("router");
+        tagNamesArray2.add("R");tagNamesArray2.add("R");tagNamesArray2.add("Bakus");
+        tagNamesArray2.add("R");tagNamesArray2.add("Biors");tagNamesArray2.add("Biors");
 
 
 
         HashMap<String,Integer> dictionary = new HashMap<String,Integer>();
 
 
-        for(int i = 0 ; i< productNamesArray2.size() ; i++){
-            if(!dictionary.containsKey(productNamesArray2.get(i))){
-                dictionary.put(productNamesArray2.get(i),0); // il bag in dictionar si ii atribui valoarea 0
+        for(int i = 0 ; i< tagNamesArray2.size() ; i++){
+            if(!dictionary.containsKey(tagNamesArray2.get(i))){
+                dictionary.put(tagNamesArray2.get(i),0); // il bag in dictionar si ii atribui valoarea 0
             }
         }
 
         // incrementez valorile
-        for(int i = 0 ; i< productNamesArray2.size() ; i++){
-            dictionary.put(productNamesArray2.get(i),dictionary.get(productNamesArray2.get(i)) + 1);
+        for(int i = 0 ; i< tagNamesArray2.size() ; i++){
+            dictionary.put(tagNamesArray2.get(i),dictionary.get(tagNamesArray2.get(i)) + 1);
         }
 
         for(String key : dictionary.keySet()){
@@ -118,7 +118,7 @@ public class ChartActivity extends AppCompatActivity {
 
             yDataList.set(0,maxEntry1.getValue());
             xDataList.set(0,maxEntry1.getKey());
-            System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaa" + maxEntry1.getKey() + " si valoare " + maxEntry1.getValue());
+            //System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaa" + maxEntry1.getKey() + " si valoare " + maxEntry1.getValue());
 
             dictionary.remove(maxEntry1.getKey()); // sterg max1
         }
@@ -136,7 +136,7 @@ public class ChartActivity extends AppCompatActivity {
             }
             yDataList.set(1,maxEntry2.getValue());
             xDataList.set(1,maxEntry2.getKey());
-            System.out.println("bbbbbbbbbbbbbbbbbbbbbbbb" + maxEntry2.getKey() + " si valoare " + maxEntry2.getValue());
+            //System.out.println("bbbbbbbbbbbbbbbbbbbbbbbb" + maxEntry2.getKey() + " si valoare " + maxEntry2.getValue());
 
             dictionary.remove(maxEntry2.getKey()); // sterg max2
         }
@@ -155,18 +155,10 @@ public class ChartActivity extends AppCompatActivity {
             }
             yDataList.set(2,maxEntry3.getValue());
             xDataList.set(2,maxEntry3.getKey());
-            System.out.println("cccccccccccccccccccccc" + maxEntry3.getKey() + " si valoare " + maxEntry3.getValue());
+            //System.out.println("cccccccccccccccccccccc" + maxEntry3.getKey() + " si valoare " + maxEntry3.getValue());
 
             dictionary.remove(maxEntry3.getKey()); // sterg max3
         }
-
-
-
-
-
-
-
-
 
         pieChart = (PieChart) findViewById(R.id.idPieCHart);
 
@@ -177,7 +169,7 @@ public class ChartActivity extends AppCompatActivity {
         pieChart.setCenterText("Tony's cool chart");
         pieChart.setCenterTextSize(10);
         Description d  =new Description();
-        d.setText("Each slice is a product type. Click to show  product name");
+        d.setText("Each slice is a Tag Name. Click to show the tag!");
         d.setTextColor(Color.RED);
         d.setTextSize(10);
         pieChart.setDescription(d);
@@ -185,8 +177,6 @@ public class ChartActivity extends AppCompatActivity {
 
 
         addDataSet();
-
-
 
         pieChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
@@ -231,7 +221,7 @@ public class ChartActivity extends AppCompatActivity {
         }
 
         // create the data set
-        PieDataSet pieDataSet = new PieDataSet(yEntrys, "Products");
+        PieDataSet pieDataSet = new PieDataSet(yEntrys, "Tag Names");
         pieDataSet.setSliceSpace(10);
         pieDataSet.setValueTextSize(20);
         pieDataSet.setSelectionShift(5);

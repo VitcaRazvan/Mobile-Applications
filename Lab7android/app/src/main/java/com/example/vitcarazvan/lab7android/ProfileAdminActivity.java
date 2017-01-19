@@ -139,7 +139,7 @@ public class ProfileAdminActivity extends Activity implements View.OnClickListen
 
                                 mBuilder.setColor(0xff777777);
                                 NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-                                mNotificationManager.notify(001,mBuilder.build());
+                                //mNotificationManager.notify(001,mBuilder.build());
                             }
                         });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

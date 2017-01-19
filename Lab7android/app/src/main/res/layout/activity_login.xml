@@ -53,5 +53,5 @@
         android:id="@+id/btnUserLogin"
         android:layout_below="@+id/txtPasswordLogin"
         android:layout_centerHorizontal="true"
-        android:onClick="btnUserLogin_Click " />
+        android:onClick="btnUserLogin_Click" />
 </RelativeLayout>

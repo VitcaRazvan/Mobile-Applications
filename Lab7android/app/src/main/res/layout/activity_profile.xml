@@ -89,7 +89,8 @@
         android:layout_marginStart="21dp"
         android:layout_above="@+id/btnStatistics"
         android:layout_alignStart="@+id/textView4"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="40dp"
+        android:onClick="onClick (ProfileActivity)" />
 
     <Button
         android:text="Show statistics"
@@ -99,7 +100,8 @@
         android:id="@+id/btnStatistics"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/sprayCanInput"
-        android:layout_marginStart="11dp" />
+        android:layout_marginStart="11dp"
+        android:onClick="onClick (ProfileActivity)" />
 
     <Button
         android:text="Logout"
@@ -109,7 +111,8 @@
         android:layout_alignBaseline="@+id/btnSendRequest"
         android:layout_alignBottom="@+id/btnSendRequest"
         android:layout_alignEnd="@+id/sprayCanInput"
-        android:layout_marginEnd="42dp" />
+        android:layout_marginEnd="42dp"
+        android:onClick="onClick (ProfileActivity)" />
 
     <TextView
         android:text="Tag Name:"
