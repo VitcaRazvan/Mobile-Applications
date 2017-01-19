@@ -20,5 +20,4 @@
         android:id="@+id/idPieCHart"
         ></com.github.mikephil.charting.charts.PieChart>
 
-
 </RelativeLayout>

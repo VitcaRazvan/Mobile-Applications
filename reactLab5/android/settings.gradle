@@ -1,0 +1,3 @@
+rootProject.name = 'reactLab5'
+
+include ':app'
